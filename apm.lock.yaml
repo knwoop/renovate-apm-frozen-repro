@@ -1,0 +1,145 @@
+lockfile_version: '4'
+apm_version: 0.39.0
+manifest_targets:
+- claude
+dependencies:
+- repo_url: microsoft/apm-sample-package
+  name: apm-sample-package
+  host: github.com
+  resolved_commit: fb2851683be0e0e7711421d518bd8dba23b0b1f6
+  resolved_ref: v1.0.0
+  version: 1.0.0
+  package_type: apm_package
+  deployed_files:
+  - .claude/agents/design-reviewer.md
+  - .claude/commands/accessibility-audit.md
+  - .claude/commands/design-review.md
+  - .claude/rules/design-standards.md
+  - .claude/skills/style-checker
+  - .claude/skills/style-checker/LICENSE
+  - .claude/skills/style-checker/SKILL.md
+  deployed_file_hashes:
+    .claude/agents/design-reviewer.md: sha256:616988766ebc7d42cc6f599a17d1ad3ab8164e139fad82e111af5441fe3986cb
+    .claude/commands/accessibility-audit.md: sha256:6d5c7d5d0038683e5658f4a90cdee61b2fc3a27b3023fc63ed6649d1ea6b6b92
+    .claude/commands/design-review.md: sha256:ed0741675cb37dd3fe77fbd199800582f745b4ee84e34ce6a92b8eb0bd6d7b81
+    .claude/rules/design-standards.md: sha256:5756b425ca79c83912e67102b32d623192bef7349ee7696275312b92c283a05e
+    .claude/skills/style-checker/LICENSE: sha256:2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c
+    .claude/skills/style-checker/SKILL.md: sha256:1142700284d253c15e561434362ae6203db08e41ef07e7082386df3651738829
+  content_hash: sha256:2a3d379e889b22c368c801d63482b0b8225849a0df3e28da78bf2e8c94675ad0
+  carried_licenses:
+  - path: .apm/skills/style-checker/LICENSE
+    source: LICENSE
+    hash: sha256:2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c
+- repo_url: github/awesome-copilot
+  name: review-and-refactor
+  host: github.com
+  resolved_commit: 93fc8b9ee3ef56b9b5e7261e6ce92d314cb2c1cf
+  version: unknown
+  virtual_path: skills/review-and-refactor
+  is_virtual: true
+  depth: 2
+  resolved_by: microsoft/apm-sample-package
+  package_type: claude_skill
+  deployed_files:
+  - .claude/skills/review-and-refactor
+  - .claude/skills/review-and-refactor/LICENSE
+  - .claude/skills/review-and-refactor/SKILL.md
+  deployed_file_hashes:
+    .claude/skills/review-and-refactor/LICENSE: sha256:e32449d23085399adc1222f7a17408b730550258e51627c153cb108ca9955823
+    .claude/skills/review-and-refactor/SKILL.md: sha256:95b48ed4b137777ddc87b77cb0873ed7f485141a517825e71af1a984cf5a6cd6
+  content_hash: sha256:7bc21b86c2164465a18912a267bf6893e2c72604b3cebfe9c14d61c580a49073
+  carried_licenses:
+  - path: LICENSE
+    source: LICENSE
+    hash: sha256:e32449d23085399adc1222f7a17408b730550258e51627c153cb108ca9955823
+deployments:
+- kind: project-relative
+  target: claude
+  value: .claude/agents/design-reviewer.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/apm-sample-package
+  active_owner: microsoft/apm-sample-package
+  content_hash: sha256:616988766ebc7d42cc6f599a17d1ad3ab8164e139fad82e111af5441fe3986cb
+- kind: project-relative
+  target: claude
+  value: .claude/commands/accessibility-audit.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/apm-sample-package
+  active_owner: microsoft/apm-sample-package
+  content_hash: sha256:6d5c7d5d0038683e5658f4a90cdee61b2fc3a27b3023fc63ed6649d1ea6b6b92
+- kind: project-relative
+  target: claude
+  value: .claude/commands/design-review.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/apm-sample-package
+  active_owner: microsoft/apm-sample-package
+  content_hash: sha256:ed0741675cb37dd3fe77fbd199800582f745b4ee84e34ce6a92b8eb0bd6d7b81
+- kind: project-relative
+  target: claude
+  value: .claude/rules/design-standards.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/apm-sample-package
+  active_owner: microsoft/apm-sample-package
+  content_hash: sha256:5756b425ca79c83912e67102b32d623192bef7349ee7696275312b92c283a05e
+- kind: project-relative
+  target: claude
+  value: .claude/skills/review-and-refactor
+  runtime: null
+  scope: project
+  owners:
+  - github/awesome-copilot/skills/review-and-refactor
+  active_owner: github/awesome-copilot/skills/review-and-refactor
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/review-and-refactor/LICENSE
+  runtime: null
+  scope: project
+  owners:
+  - github/awesome-copilot/skills/review-and-refactor
+  active_owner: github/awesome-copilot/skills/review-and-refactor
+  content_hash: sha256:e32449d23085399adc1222f7a17408b730550258e51627c153cb108ca9955823
+- kind: project-relative
+  target: claude
+  value: .claude/skills/review-and-refactor/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - github/awesome-copilot/skills/review-and-refactor
+  active_owner: github/awesome-copilot/skills/review-and-refactor
+  content_hash: sha256:95b48ed4b137777ddc87b77cb0873ed7f485141a517825e71af1a984cf5a6cd6
+- kind: project-relative
+  target: claude
+  value: .claude/skills/style-checker
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/apm-sample-package
+  active_owner: microsoft/apm-sample-package
+  content_hash: null
+- kind: project-relative
+  target: claude
+  value: .claude/skills/style-checker/LICENSE
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/apm-sample-package
+  active_owner: microsoft/apm-sample-package
+  content_hash: sha256:2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c
+- kind: project-relative
+  target: claude
+  value: .claude/skills/style-checker/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - microsoft/apm-sample-package
+  active_owner: microsoft/apm-sample-package
+  content_hash: sha256:1142700284d253c15e561434362ae6203db08e41ef07e7082386df3651738829
