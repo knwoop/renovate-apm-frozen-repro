@@ -9,7 +9,7 @@ targets:
   - claude
 dependencies:
   apm:
-    - microsoft/apm-sample-package#v1.0.0
+    - microsoft/apm-sample-package#v1.0.1
   mcp: []
 includes: auto
 scripts: {}
